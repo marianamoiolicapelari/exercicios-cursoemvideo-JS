@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Que país você mora?</title>
+</head>
+
+<body>
+  <h1>Brasileiro(a) ou Estrangeiro(a)?</h1>
+  País de origem: <input type="text" name="paisorigem" id="paisorigem">
+  <input type="button" value="Verificar" onclick="verificar()">
+  <div id="resp">
+
+  </div>
+  <script>
+    function verificar() {
+      var origem = document.querySelector('input#paisorigem')
+      var resp = document.querySelector('div#resp')
+      resp.innerHTML = `<p> Seu país de origem é ${paisorigem}!`
+      if (paisorigem != 'Brasil') {
+        resp.innerHTML = `<p>Você é <strong>brasileiro</strong>!</p>`
+      } else {
+      resp.innerHTML = `<p>Você é estrangeiro!</p>`
+    }
+  }
+  </script>
+</body>
+
+</html>
