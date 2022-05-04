@@ -17,15 +17,16 @@
   </div>
   <script>
     function verificar() {
-      var origem = document.querySelector('input#paisorigem')
-      var resp = document.querySelector('div#resp')
-      resp.innerHTML = `<p> Seu país de origem é ${paisorigem}!`
-      if (paisorigem != 'Brasil') {
-        resp.innerHTML = `<p>Você é <strong>brasileiro</strong>!</p>`
+      var origem = document.getElementById('paisorigem')
+      var resp = document.getElementById('resp')
+      var pais = (paisorigem.value)
+      resp.innerHTML = `<p>Seu país de origem é <strong>${pais}</strong>!</p>`
+      if (pais != 'Brasil') {
+        resp.innerHTML += `Você é <strong>estrangeiro</strong>!`
       } else {
-      resp.innerHTML = `<p>Você é estrangeiro!</p>`
+        resp.innerHTML += `Você é <strong>brasileiro</strong>!`
+      }
     }
-  }
   </script>
 </body>
 
