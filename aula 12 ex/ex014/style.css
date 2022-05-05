@@ -28,6 +28,7 @@ footer {
     color: white;
     text-align: center;
     font-style: italic;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 600px){
